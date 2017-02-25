@@ -13,8 +13,8 @@
                     $articletitle = url_title($popular->title, 'dash', TRUE); 
 
                  ?>
-                    <li style="line-height:40px;">
-                        <a style="font-weight:bold;" href="<?php echo base_url('latestupdates/single/' . $popular->id.'/'.$articletitle); ?>">            <i class="fa fa-caret-right " style="margin-top: 8px;"></i>
+                    <li style="line-height:25px;">
+                        <a style="font-weight:bold;" href="<?php echo base_url('latestupdates/single/' . $popular->id.'/'.$articletitle); ?>">            <i class="fa fa-caret-right " style="margin-top: 0px;"></i>
 <?php echo $popular->title; ?></a>
                     </li>
                 <?php endforeach; ?>

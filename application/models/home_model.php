@@ -179,8 +179,8 @@ class Home_model extends CI_Model {
         return $result = $query->result();
 	}
 
-	function getdistrictnewsById($district,$id){
-		$query = $this->db->get_where('posts','status = "Active" and pagename="district" and district="'.$district.'" and id='.$id);
+	function getdistrictnewsById($id){
+		$query = $this->db->get_where('posts','status = "Active" and pagename="district" and id='.$id);
         return $result = $query->result();
 	}
 

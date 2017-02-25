@@ -51,7 +51,7 @@
         <header id="ccr-header">
             <section id="ccr-site-title">
 
-                <div class="container main" style="background:#F0F0F0;">
+                <div class="container main">
                     <div class="col-md-12 col-ms-12 col-sm-12 col-xs-12" style="padding:0px !important;" >
                         <div class="col-md-3 col-xs-12 logodiv"> 
                           <a href="<?php echo base_url(); ?>" class="navbar-brand">
@@ -105,7 +105,7 @@
             </div>
             <?php $lastupdates = getLatestUpdates(); ?>
             <div class="container headerupdate" id="breaking"  >
-                <div class="update-ribon col-md-2" style="background:darkgreen;">Latest News</div>
+                <div class="update-ribon col-md-2" style="background:#000;">Latest News</div>
                 <span class="glyphicon glyphicon-bullhorn latestnewsicon"></span>
                 <div class="mar col-md-10 falshnewsscroll" >
                     <marquee style="line-height: 36px;" behavior="scroll" scrollamount="4" direction="left" onmouseover="this.stop();" onmouseout="this.start();">

@@ -8,7 +8,8 @@ class  Home extends CI_Controller {
         $data['flash'] = $this->home_model->getAll('flash');
         $data['latestupdates'] = $this->home_model->getAll('latest');
         $data['political'] = $this->home_model->getAll('political');
-        $data['editorchoice'] = $this->home_model->getAll('editor_choice');
+        $data['apnews'] = $this->home_model->getAll('apnews');
+        $data['tnews'] = $this->home_model->getAll('tnews');
         $data['moviereviews'] = $this->home_model->getAll('movie_reviews');
         $data['cinema'] = $this->home_model->getAll('cinema');
         $title['title'] = "APNN News Portal";
@@ -22,6 +23,7 @@ class  Home extends CI_Controller {
                     $title['title'] = "contact form";
                     $this->load->view('header',$title);
                     $this->load->view('contact_form_view');
+                    $this->load->view('sidebar');
                     $this->load->view('footer');
 
 
@@ -81,5 +83,13 @@ class  Home extends CI_Controller {
         {
             return TRUE;
         }
+    }
+
+    public function aboutus(){
+        $title['title'] = "About Us";
+        $this->load->view('header',$title);
+        $this->load->view('aboutus');
+        $this->load->view('sidebar');
+        $this->load->view('footer');
     }
 }

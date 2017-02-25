@@ -12,7 +12,7 @@ class Gallery extends CI_Controller {
 		$this->load->library('paginationlib');
 		try
 		{	
-			$title['title'] = "చిత్రమాలిక";
+			$title['title'] = "Gallery";
 			$data=[];
 			$pagingConfig   = $this->paginationlib->initPagination("gallery/index",$this->gallery_model->get_count(),21,3);
  			$data["pagination_helper"]= $this->pagination;
@@ -34,7 +34,7 @@ class Gallery extends CI_Controller {
 		$this->load->library('pagination');
 		$this->load->library('paginationlib');
 		try{	
-			$title['title'] = "చిత్రమాలిక";
+			$title['title'] = "Gallery";
 			$data=[];
 			$pagingConfig   = $this->paginationlib->initPagination("gallery/cats/$cat_id",$this->gallery_model->get_cat_count($cat_id),20,4);
  			$data["pagination_helper"]= $this->pagination;
@@ -54,7 +54,7 @@ class Gallery extends CI_Controller {
 		$this->load->library('pagination');
 		$this->load->library('paginationlib');
 		try{	
-			$title['title'] = "చిత్రమాలిక";
+			$title['title'] = "Gallery";
 			$data=[];
 			$pagingConfig   = $this->paginationlib->initPagination("gallery/photos/$photo_id",$this->gallery_model->get_cat_photo_count($photo_id),21,4);
  			$data["pagination_helper"]= $this->pagination;
@@ -72,7 +72,7 @@ class Gallery extends CI_Controller {
 	public function albumDetails($photo_id=0){
 		$this->load->model('gallery_model');
 		try{	
-			$title['title'] = "చిత్రమాలిక";
+			$title['title'] = "Gallery";
 			$data=[];
 			$data["gallery"] = $this->gallery_model->get_albums_photos($photo_id);
 			$this->load->view('header',$title);

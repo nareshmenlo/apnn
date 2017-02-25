@@ -598,7 +598,7 @@ li:hover .ccr-thumbnail p{
     color: #fff !important;   
 }
 .active{
-    background-color: #1F0AEF;
+    background-color: #000;
     color: #fff !important;
 }
 #ccr-nav-main .current-time {
@@ -654,15 +654,15 @@ li:hover .ccr-thumbnail p{
 .dropdown-menu > .active >a:hover, 
 .dropdown-menu > .active >a:focus{
     background-image: none;
-    background-color: #4169E1;
+    background-color: #BE0203;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
     background-color: #4169E1 !important;
     color :#fff;
 }
 .navbar-default .navbar-nav > li > a{
-    color :blue;
-    font-size: 16px;
+    color :#fff;
+    font-size: 13px;
     font-family: maven_probold;
     font-weight: bold;
 }
@@ -671,6 +671,20 @@ li:hover .ccr-thumbnail p{
     height: 30px !important;
 }
 
+.nav a:hover .caret {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+
+.nav .caret {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    color: #fff;
+    background-color: #000;
+}
 
 #breaking {
     /*background: url(../img/flashnewsbackground.png) no-repeat;*/
@@ -2088,13 +2102,17 @@ a.latestupdate{
     font-size: 18px;
 }
 a.latestupdate:hover{   
-    color: #000;
+    color: #fff;
     
 }
 .falshnewsscroll{
     padding: 4px 0 4px 19px;
     margin-left: -15px;
     background: #BE0203;
+    background: -webkit-radial-gradient( #BE0203,black); /* For Safari 5.1 to 6.0 */
+    background: -o-radial-gradient( #BE0203,black); /* For Opera 11.1 to 12.0 */
+    background: -moz-radial-gradient( #BE0203,black); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(#BE0203,black); /* Standard syntax */
     width: 82.6%;
     height: 33px;
 }
@@ -2262,6 +2280,7 @@ ul.social li a span{display:none}
     padding :5px 0px 5px 0px !important;
 }
 .navbar{
+    background: #BE0203 !important;
    /*background-image: linear-gradient(to bottom, #fff 0px, #616161 100%) !important;*/
    /*background: #1F0AEF;*/
 }
@@ -2271,7 +2290,7 @@ ul.social li a span{display:none}
     height: 40px !important;
 }
 .navbar-nav > li:hover{
-    background: blue;
+    background: #000;
 }
 .navbar {min-height:28px !important;margin-bottom:5px;}
 .update-ribon{

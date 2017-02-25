@@ -12,8 +12,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="<?php echo base_url('dashboard'); ?>" >
-            <img src="<?php echo asset_url(); ?>img/APNNadmin.jpg" style="width:250px;" />
+          <a class="navbar-brand" href="<?php echo base_url('dashboard'); ?>" style="padding: 0px 15%;margin-top: 15px;" >
+            <img style="width: 40px;" src="<?php echo asset_url(); ?>img/APNN copy.png" alt="Site Logo" />
           </a>
         </div>
           

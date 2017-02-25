@@ -9,37 +9,8 @@
     }
 </style>
 <section  id="ccr-left-section" class="col-md-8"> 
-   <section class="col-md-12 padding0"  id="ccr-slide-main" class="carousel slide" data-ride="carousel">
-    <!-- Carousel items -->
-    <div class="carousel-inner">
-        <?php
-        $banners=getHeaderBanners();
-        $i = 1;
-        if(isset($banners)){
-        foreach ($banners as $banner): if ($i == 1) {
-                ?>
-                <div class="active item">
-                <?php } else { ?>
-                    <div class="item">
-                    <?php } $i++; ?>
-                    <div class="container slide-element">
-                        <img src="<?php echo base_url(); ?>useruploadfiles/postimages/<?php echo $banner->image; ?>"
-                             class="img-responsive">
-                        <p><a  href="<?php echo base_url('banner/single/' . $banner->id.'/'.url_title($banner->title)); ?>"><?php echo $banner->title; ?></a></p>
-                    </div> <!-- /.slide-element -->
-                </div> <!--/.active /.item -->
-
-                <!-- /.item -->
-            <?php endforeach; } ?>
-
-        </div> <!-- /.carousel-inner -->
-
-        <!-- /.carousel-indicators -->
-
-        <!-- slider nav -->
-        <a class="carousel-control left" href="#ccr-slide-main" data-slide="prev"><i class="fa fa-arrow-left"></i></a>
-        <a class="carousel-control right" href="#ccr-slide-main" data-slide="next"><i class="fa fa-arrow-right"></i></a>
-    </section>
+   <section class="col-md-12 padding0" >
+   </section>
       
     <div class="row"  >
         <div class="col-md-12 padding0">
@@ -176,31 +147,31 @@
         <div class="col-md-12 padding0"><section id="sidebar-popular-post"  >
                 <div class="ccr-gallery-ttile" >
                     <span></span> 
-                    <p class="title_color text-left" style="background: darkgoldenrod;"><strong>Andhra Pradesh</strong></p>
+                    <p class="title_color text-left" style="background: darkgoldenrod;"><strong>Editorial Choice</strong></p>
                 </div> <!-- .ccr-gallery-ttile -->
                   <div class="col-md-12 padding0">
                    <?php
-                    if (count($apnews) > 0) { 
-                            $articletitle = url_title($apnews[0]->title, 'dash', TRUE);
+                    if (count($editorchoice) > 0) { 
+                            $articletitle = url_title($editorchoice[0]->title, 'dash', TRUE);
 
                         ?> 
                 <div class="col-md-6 padding0">
-                <a class="pull-left singleTitle" style="font-weight:bold;font-size:20px;padding-top:5px;color:#000;" href="<?php echo base_url('apnews/single/' . $apnews[0]->id.'/'.$articletitle); ?>"><?php echo $apnews[0]->title; ?>
-                </a> <?php if ($apnews[0]->image != '') { ?>
-                        <a href="<?php echo base_url('apnews/single/' .$apnews[0]->id.'/'.$articletitle); ?>">
-                            <img style="float:left;height: 180px;" src="<?php echo base_url(); ?>useruploadfiles/postimages/<?php echo $apnews[0]->image; ?>" >
+                <a class="pull-left singleTitle" style="font-weight:bold;font-size:20px;padding-top:5px;color:#000;" href="<?php echo base_url('editorchoice/single/' . $editorchoice[0]->id.'/'.$articletitle); ?>"><?php echo $editorchoice[0]->title; ?>
+                </a> <?php if ($editorchoice[0]->image != '') { ?>
+                        <a href="<?php echo base_url('editorchoice/single/' .$editorchoice[0]->id.'/'.$articletitle); ?>">
+                            <img style="float:left;height: 180px;" src="<?php echo base_url(); ?>useruploadfiles/postimages/<?php echo $editorchoice[0]->image; ?>" >
                         </a>
                     <?php } ?>                   
                         <div style="height:157px;width: 100%;text-align: justify;padding-top:15px;overflow:hidden;" class="pull-left" >
                             <div class="brief_desc">
-                                <?php echo trim(strip_tags($apnews[0]->description)) . "..."; ?>
+                                <?php echo trim(strip_tags($editorchoice[0]->description)) . "..."; ?>
                             </div>
                         </div>
                 </div>
                  <div class="col-md-6 padding0" style="float:right;">
                 <ul class="mostpopular_news">
                     <?php
-                       foreach ($apnews as $k => $t):
+                       foreach ($editorchoice as $k => $t):
                             if($k==0){
                                 continue;
                             }if($k==4){
@@ -211,11 +182,11 @@
                             <li>
                                 <div class="brief_box">
                                     <div class="brief_title">
-                                        <a class="pull-left" style="font-weight:bold;" href="<?php echo base_url('apnews/single/' . $t->id.'/'.$articletitle); ?>"><?php echo $t->title; ?></a>
+                                        <a class="pull-left" style="font-weight:bold;" href="<?php echo base_url('editorchoice/single/' . $t->id.'/'.$articletitle); ?>"><?php echo $t->title; ?></a>
                                     </div>
                                     <div style="width: 100%;" class="pull-left">
                                         <?php if ($t->image != '') { ?>
-                                            <a href="<?php echo base_url('apnews/single/' . $t->id.'/'.$articletitle); ?>">
+                                            <a href="<?php echo base_url('editorchoice/single/' . $t->id.'/'.$articletitle); ?>">
                                                 <img style="float:left;" class="brief_img" src="<?php echo base_url(); ?>useruploadfiles/postimages/<?php echo $t->image; ?>"  style="width:70px; height:70px;">
                                             </a>
                                         <?php } ?>
@@ -237,72 +208,6 @@
                 
             </section>
         </div>
-        <div class="col-md-12 padding0"><section id="sidebar-popular-post"  >
-                <div class="ccr-gallery-ttile" >
-                    <span></span> 
-                    <p class="title_color text-left" style="background: deeppink;"><strong>Telangana</strong></p>
-                </div> <!-- .ccr-gallery-ttile -->
-                  <div class="col-md-12 padding0">
-                   <?php
-                    if (count($tnews) > 0) { 
-                            $articletitle = url_title($tnews[0]->title, 'dash', TRUE);
-
-                        ?> 
-                <div class="col-md-6 padding0">
-                <a class="pull-left singleTitle" style="font-weight:bold;font-size:20px;padding-top:5px;color:#000;" href="<?php echo base_url('tnews/single/' . $tnews[0]->id.'/'.$articletitle); ?>"><?php echo $tnews[0]->title; ?>
-                </a> <?php if ($tnews[0]->image != '') { ?>
-                        <a href="<?php echo base_url('tnews/single/' .$tnews[0]->id.'/'.$articletitle); ?>">
-                            <img style="float:left;height: 180px;" src="<?php echo base_url(); ?>useruploadfiles/postimages/<?php echo $tnews[0]->image; ?>" >
-                        </a>
-                    <?php } ?>                   
-                        <div style="height:157px;width: 100%;text-align: justify;padding-top:15px;overflow:hidden;" class="pull-left" >
-                            <div class="brief_desc">
-                                <?php echo trim(strip_tags($tnews[0]->description)) . "..."; ?>
-                            </div>
-                        </div>
-                </div>
-                 <div class="col-md-6 padding0" style="float:right;">
-                <ul class="mostpopular_news">
-                    <?php
-                       foreach ($tnews as $k => $t):
-                            if($k==0){
-                                continue;
-                            }if($k==4){
-                                break;
-                            }
-                            $articletitle = url_title($t->title, 'dash', TRUE);
-                            ?>
-                            <li>
-                                <div class="brief_box">
-                                    <div class="brief_title">
-                                        <a class="pull-left" style="font-weight:bold;" href="<?php echo base_url('tnews/single/' . $t->id.'/'.$articletitle); ?>"><?php echo $t->title; ?></a>
-                                    </div>
-                                    <div style="width: 100%;" class="pull-left">
-                                        <?php if ($t->image != '') { ?>
-                                            <a href="<?php echo base_url('tnews/single/' . $t->id.'/'.$articletitle); ?>">
-                                                <img style="float:left;" class="brief_img" src="<?php echo base_url(); ?>useruploadfiles/postimages/<?php echo $t->image; ?>"  style="width:70px; height:70px;">
-                                            </a>
-                                        <?php } ?>
-                                        <div class="brief_desc">
-                                            <?php echo trim(strip_tags($t->description)) . "..."; ?>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <?php
-                        endforeach;
-                    ?>
-                </ul>
-                </div> <?
-                } else {
-                        ?>
-                    <?php } ?> 
-                    </div>
-                
-            </section>
-        </div>
-
-
         <div class="col-md-12 padding0"><section id="sidebar-popular-post" >
                 <div class="ccr-gallery-ttile" >
                     <span></span> 

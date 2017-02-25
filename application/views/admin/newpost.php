@@ -16,21 +16,15 @@
                   <div class="form-group">
                     <label for="name">Category</label>
                       <select name="pagename[]"    class="form-control selectpicker" id="pagename" multiple="" size="6"> 
-              <option value="flashnews">Flash News</option>
-              <option value="latest">Latest News</option>
-              <option value="editor_choice">Editor Choice</option>
-              <option value="political">Political News</option>
-              <option value="cinema">Movie News</option>    
-              <option value="movie_reviews">Movie Reviews</option>
-  <!--             <option value="crime">crime</option>
-              <option value="special">special</option>
-              <option value="business">business</option>
-              <option value="panchangam">panchangam</option>
-              <option value="edisangathi">Edi Sangathi</option>
-             <option value="kokuroko">Kokuroko</option>
-  -->             </select>
+                        <option value="latest">Latest News</option>
+                        <option value="apnews">Andhra Pradesh</option>
+                        <option value="tnews">Telangana</option>
+                        <option value="political">Political News</option>
+                        <option value="cinema">Movie News</option>    
+                        <option value="movie_reviews">Movie Reviews</option>
+                      </select>
                   </div>
-               <!--   <div class="form-group">
+                  <div class="form-group">
                     <label for="name">District</label>
                       <select name="district"    class="form-control" id="district"> 
                         <option value="">Select District</option>
@@ -58,7 +52,7 @@
                         <option value="warangal">Warangal</option>
           							<option value="westgodavari">West Godavari</option>
         						  </select>
-                  </div>-->
+                  </div>
                   <div class="form-group">
                     <label for="post_title">Title</label>
                       <input type="text" value="<?php echo set_value('post_title'); ?>" class="form-control" id="post_title" placeholder="Title" name="post_title"/>
