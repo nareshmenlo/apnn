@@ -1,0 +1,1 @@
+ <img src="<?php echo asset_url(); ?>img/add2.gif" alt="Site Logo" />
